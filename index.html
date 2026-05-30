@@ -1,561 +1,1058 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>STA 3032</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="STA 3032 Formula Sheet for Modules 5 and 6" />
+  <title>STA 3032 Formula Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #005fcc;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 3px solid #005fcc;
+      outline-offset: 2px;
+    }
+
+    header {
+      background-color: #f5f5f5;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #ccc;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: #555;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: #005fcc;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0.25rem 0 0 0;
+      font-weight: normal;
+      color: #444;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.25rem;
+    }
+
+    math {
+      display: block;
+      margin: 0.75rem 0 0.75rem 1rem;
+    }
+  </style>
 </head>
-<nav>
-</nav>
 <body>
-<h1>STA 3032 Formula Sheet</h1>
-<h2>Modules 5 and 6</h2>
-<p><strong><span style="text-decoration: underline;">Sample Statistics</span></strong><br>Sample mean:<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mover><mi>x</mi> <mo>_</mo> </mover> <mo>=</mo> <mfrac><mn>1</mn> <mi>n</mi> </mfrac> <munderover><mo>∑</mo> <mrow><mi>i</mi> <mo>=</mo> <mn>1</mn> </mrow> <mi>n</mi> </munderover> <msub><mi>x</mi> <mi>i</mi> </msub> </math><br>Sample variance: <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msubsup><mi>s</mi> <mi>x</mi> <mn>2</mn> </msubsup> <mo>=</mo> <mfrac><mn>1</mn> <mrow><mi>n</mi> <mo>−</mo> <mn>1</mn> </mrow> </mfrac> <munder><mo>∑</mo> <mrow></mrow> </munder> <msup><mrow><mo>(</mo> <msub><mi>x</mi> <mi>i</mi> </msub> <mo>−</mo> <mover><mi>x</mi> <mo>_</mo> </mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> <mo>=</mo> <mfrac><mn>1</mn> <mrow><mi>n</mi> <mo>−</mo> <mn>1</mn> </mrow> </mfrac> <mrow><mo>(</mo> <munder><mo>∑</mo> <mrow></mrow> </munder> <msubsup><mi>x</mi> <mi>i</mi> <mn>2</mn> </msubsup> <mo>−</mo> <mi>n</mi> <msup><mover><mi>x</mi> <mo>_</mo> </mover> <mn>2</mn> </msup> <mo>)</mo> </mrow> </math><br><span style="text-decoration: underline;"><strong>Linear transformations</strong></span><br>Mean:<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>E</mi> <mo stretchy="true">(</mo> <mi>a</mi><mi>X</mi> <mo>+</mo> <mi>b</mi> <mo stretchy="true">)</mo> <mo>=</mo> <mi>a</mi> <mo>⁢</mo> <mi>E</mi> <mo stretchy="true">(</mo> <mi>X</mi> <mo stretchy="true">)</mo> <mo>+</mo> <mi>b</mi> </math><br>Variance:<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>V</mi> <mo stretchy="true">(</mo> <mi>a</mi><mi>X</mi> <mo>+</mo> <mi>b</mi> <mo stretchy="true">)</mo> <mo>=</mo> <msup><mi>a</mi> <mn>2</mn> </msup> <mo>⁢</mo> <mi>V</mi> <mo stretchy="true">(</mo> <mi>X</mi> <mo stretchy="true">)</mo> </math><br><br><span style="text-decoration: underline;"><strong>Linear combinations</strong></span><br>Mean: <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><!-- Expectation of the sum --> <mi>E</mi> <mo stretchy="true">(</mo> <munderover><mo>∑</mo> <!-- ∑ --> <mrow><mi>i</mi><mo>=</mo><mn>1</mn> </mrow> <mi>n</mi> </munderover> <mo>⁢</mo> <!-- invisible multiplication --> <msub><mi>a</mi><mi>i</mi></msub> <mo>⁢</mo> <msub><mi>X</mi><mi>i</mi></msub> <mo stretchy="true">)</mo> <mo>=</mo> <!-- Sum of expectations --> <munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn> </mrow> <mi>n</mi> </munderover> <mo>⁢</mo> <msub><mi>a</mi><mi>i</mi></msub> <mo>⁢</mo> <mi>E</mi><mo stretchy="false">(</mo> <msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">)</mo> </mrow> </math> <br>Variance: <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><!-- Variance of the sum --> <mi>V</mi> <mo stretchy="true">(</mo> <munderover><mo>∑</mo> <!-- ∑ --> <mrow><mi>i</mi><mo>=</mo><mn>1</mn> </mrow> <mi>n</mi> </munderover> <mo>⁢</mo> <!-- invisible multiplication --> <msub><mi>a</mi><mi>i</mi></msub> <mo>⁢</mo> <msub><mi>X</mi><mi>i</mi></msub> <mo stretchy="true">)</mo> <mo>=</mo> <!-- Sum of expectations --> <munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn> </mrow> <mi>n</mi> </munderover> <munderover><mo>∑</mo> <mrow><mi>j</mi><mo>=</mo><mn>1</mn> </mrow> <mi>n</mi> </munderover> <mo>⁢</mo> <msub><mi>a</mi><mi>i</mi></msub><msub><mi>a</mi><mi>j</mi></msub> <mo>⁢</mo> <mi>Cov</mi><mo stretchy="false">(</mo> <msub><mi>X</mi><mi>i</mi></msub><mo>,</mo><msub><mi>X</mi><mi>j</mi></msub><mo stretchy="false">)</mo> </mrow> </math><br></p>
-<p><strong><span style="text-decoration: underline;">Regression Model</span></strong></p>
-<p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><!-- Left‑hand side --> <msub><mi>Y</mi> <mi>i</mi></msub> <mo>=</mo> <!-- Linear predictor --> <msub><mi>β</mi><mn>0</mn></msub> <mo>+</mo> <msub><mi>β</mi><mn>1</mn></msub> <msub><mi>x</mi> <mrow><mn>1</mn> <mo>,</mo> <mi>i</mi> </mrow> </msub> <mo>+</mo> <!-- … --> <msub><mi>β</mi><mi>p</mi></msub> <msub><mi>x</mi> <mrow><mi>p</mi> <mo>,</mo> <mi>i</mi> </mrow> </msub> <mo>+</mo> <msub><mi>ϵ</mi> <!-- epsilon --> <mi>i</mi></msub> <!-- Space and distribution --> <mspace width="2em"></mspace> <mrow><msub><mi>ϵ</mi><mi>i</mi></msub> <mover><mo>~</mo> <mstyle mathsize="0.8em"><mtext>i.i.d.</mtext> </mstyle> </mover> <mspace width="0.2em"></mspace> <mi>N</mi> <mo stretchy="false">(</mo> <mn>0</mn> <mo>,</mo> <mi>σ</mi> <mo stretchy="false">)</mo> </mrow> </mrow> </math><br> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><!-- b₁ --> <msub><mi>b</mi> <mn>1</mn></msub> <mo>=</mo> <!-- first fraction --> <mfrac><!-- numerator --> <mrow><munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn> </mrow> <mi>n</mi> </munderover> <mo stretchy="false">(</mo> <msup><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub> <mo>−</mo> <mover><mi>x</mi> <mo>_</mo> </mover> </mrow> <mo stretchy="false">)</mo> <mo stretchy="false">(</mo> <msub><mi>y</mi><mi>i</mi></msub> <mo>−</mo> <mover><mi>y</mi> <mo>_</mo> </mover> </mrow> <mrow></mrow> </msup> <mo stretchy="false">)</mo> </mrow> <!-- denominator --> <mrow><munderover><mo>∑</mo> <mrow><mi>i</mi> <mo>=</mo> <mn>1</mn> </mrow> <mi>n</mi> </munderover> <msup><mrow><mo stretchy="false">(</mo> <msub><mi>x</mi><mi>i</mi></msub> <mo>−</mo> <mover><mi>x</mi> <mo>_</mo> </mover> <mo stretchy="false">)</mo> </mrow> <mn>2</mn> </msup> </mrow></mfrac></math></p>
-<p><span style="text-decoration: underline;"><strong>Regression Sum of Squares</strong></span> <br> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>SST</mi> <mo>=</mo> <mi>SSE</mi> <mo>+</mo> <mi>SSR</mi> </math> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mo>(</mo> <mi>n</mi> <mo>−</mo> <mn>1</mn> <mo>)</mo> <mo>=</mo> <mo>(</mo> <mi>n</mi> <mo>−</mo> <mi>p</mi> <mo>−</mo> <mn>1</mn> <mo>)</mo> <mo>+</mo> <mi>p</mi> </math> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>SST</mi> <mo>=</mo> <munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow> <mi>n</mi> </munderover> <msup><mrow><mo>(</mo> <msub><mi>y</mi><mi>i</mi></msub> <mo>−</mo> <mover><mi>y</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> </math> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>SSE</mi> <mo>=</mo> <munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow> <mi>n</mi> </munderover> <msup><mrow><mo>(</mo> <msub><mi>y</mi><mi>i</mi></msub> <mo>−</mo> <msub><mover><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub> <mo>)</mo> </mrow> <mn>2</mn> </msup> </math> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>SSR</mi> <mo>=</mo> <munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow> <mi>n</mi> </munderover> <msup><mrow><mo>(</mo> <msub><mover><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub> <mo>−</mo> <mover><mi>y</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> </math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>MS</mi>
-  <mo>=</mo>
-  <mi>SS</mi>
-  <mo>/</mo>
-  <mi>df</mi>
-</math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>s</mi>
-    <mn>2</mn>
-  </msup>
-  <mo>=</mo>
-  <mi>MSE</mi>
-</math>
-</p>
-<p><strong><span style="text-decoration: underline;">Model Evaluation Measures</span></strong>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>R</mi>
-    <mn>2</mn>
-  </msup>
-  <mo>=</mo>
-  <mi>SSR</mi>
-  <mo>/</mo>
-  <mi>SST</mi>
-  <mo>=</mo>
-  <mn>1</mn>
-  <mo>−</mo>
-  <mi>SSE</mi>
-  <mo>/</mo>
-  <mi>SST</mi>
-</math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msubsup>
-    <mi>R</mi>
-    <mi>adj</mi>
-    <mn>2</mn>
-  </msubsup>
-  <mo>=</mo>
-  <msup>
-    <mi>R</mi>
-    <mn>2</mn>
-  </msup>
-  <mo>−</mo>
-  <mo>(</mo>
-  <mn>1</mn>
-  <mo>−</mo>
-  <msup>
-    <mi>R</mi>
-    <mn>2</mn>
-  </msup>
-  <mo>)</mo>
-  <mfrac>
-    <mi>p</mi>
-    <mrow>
-      <mi>n</mi>
-      <mo>−</mo>
-      <mi>p</mi>
-      <mo>−</mo>
-      <mn>1</mn>
-    </mrow>
-  </mfrac><mo>=</mo>
-  <mn>1</mn>
-  <mo>−</mo>
-  <mfrac>
-    <mrow>
-      <mi>SSE</mi>
-      <mo>/</mo>
-      <mo>(</mo>
-      <mi>n</mi>
-      <mo>−</mo>
-      <mi>p</mi>
-      <mo>−</mo>
-      <mn>1</mn>
-      <mo>)</mo>
-    </mrow>
-    <mrow>
-      <mi>SST</mi>
-      <mo>/</mo>
-      <mo>(</mo>
-      <mi>n</mi>
-      <mo>−</mo>
-      <mn>1</mn>
-      <mo>)</mo>
-    </mrow>
-  </mfrac>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>AIC</mi>
-  <mo>=</mo>
-  <mn>2</mn>
-  <mo>(</mo>
-  <mi>p</mi>
-  <mo>+</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>+</mo>
-  <mi>n</mi>
-  <mo>log</mo>
-  <mrow>
-    <mo>(</mo>
-    <mfrac>
-      <mi>SSE</mi>
-      <mi>n</mi>
-    </mfrac>
-    <mo>)</mo>
-  </mrow>
-  <mo>+</mo>
-  <mi>c</mi>
-</math>
-</p>
-<p><span style="text-decoration: underline;"><strong>Inference for Regression Analysis</strong></span><br>Confidence Interval: <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>b</mi> <mi>j</mi> </msub> <mo>∓</mo> <msub><mi>t</mi> <mrow><mn>1</mn> <mo>−</mo> <mi>α</mi> <mo>/</mo> <mn>2</mn> <mo>,</mo> <mi>n</mi> <mo>−</mo> <mi>p</mi> <mo>−</mo> <mn>1</mn> </mrow> </msub> <msub><mi>s</mi> <msub><mi>b</mi> <mi>j</mi> </msub> </msub> </math>Hypothesis Testing: <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>T.S.</mi> <mo>=</mo> <mfrac><mrow><msub><mi>b</mi> <mi>j</mi> </msub> <mo>−</mo> <msub><mi>β</mi> <mrow><mi>j</mi> <mn>0</mn> </mrow> </msub> </mrow> <msub><mi>s</mi> <msub><mi>β</mi> <mi>j</mi> </msub> </msub> </mfrac> <mspace width="0.5em"></mspace> <mover><mo>∼</mo> <msub><mi>H</mi> <mn>0</mn> </msub> </mover> <mspace width="0.5em"></mspace> <msub><mi>t</mi> <mrow><mi>n</mi> <mo>−</mo> <mi>p</mi> <mo>−</mo> <mn>1</mn> </mrow> </msub> </math> where (for simple linear regression only) <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>s</mi> <msub><mi>β</mi> <mn>1</mn> </msub> </msub> <mo>=</mo> <mfrac><mi>s</mi> <msqrt><mrow><munderover><mo>∑</mo> <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow> <mi>n</mi> </munderover> <msup><mrow><mo>(</mo> <msub><mi>x</mi><mi>i</mi></msub> <mo>−</mo> <mover><mi>x</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> </mrow> </msqrt> </mfrac> </math>CI on mean response (for simple linear regression only) <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mover><mi>y</mi> <mo>^</mo> </mover> <mo>∓</mo> <msub><mi>t</mi> <mrow><mn>1</mn> <mo>−</mo> <mi>α</mi> <mo>/</mo> <mn>2</mn> <mo>,</mo> <mi>n</mi> <mo>−</mo> <mn>2</mn> </mrow> </msub> <mrow><mo>(</mo> <mi>s</mi> <msqrt><mrow><mfrac><mn>1</mn> <mi>n</mi> </mfrac> <mo>+</mo> <mfrac><msup><mrow><mo>(</mo> <msub><mi>x</mi><mi>obs</mi></msub> <mo>−</mo> <mover><mi>x</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> <mrow><munderover><mo>∑</mo> <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow> <mi>n</mi> </munderover> <msup><mrow><mo>(</mo> <msub><mi>x</mi><mi>j</mi></msub> <mo>−</mo> <mover><mi>x</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> </mrow> </mfrac> </mrow> </msqrt> <mo>)</mo> </mrow> </math>PI on response (for simple linear regression only) <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mover><mi>y</mi> <mo>^</mo> </mover> <mo>∓</mo> <msub><mi>t</mi> <mrow><mn>1</mn> <mo>−</mo> <mi>α</mi> <mo>/</mo> <mn>2</mn> <mo>,</mo> <mi>n</mi> <mo>−</mo> <mn>2</mn> </mrow> </msub> <mrow><mo>(</mo> <mi>s</mi> <msqrt><mrow><mn>1</mn> <mo>+</mo> <mfrac><mn>1</mn> <mi>n</mi> </mfrac> <mo>+</mo> <mfrac><msup><mrow><mo>(</mo> <msub><mi>x</mi><mi>new</mi></msub> <mo>−</mo> <mover><mi>x</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> <mrow><munderover><mo>∑</mo> <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow> <mi>n</mi> </munderover> <msup><mrow><mo>(</mo> <msub><mi>x</mi><mi>j</mi></msub> <mo>−</mo> <mover><mi>x</mi><mo>_</mo></mover> <mo>)</mo> </mrow> <mn>2</mn> </msup> </mrow> </mfrac> </mrow> </msqrt> <mo>)</mo> </mrow> </math>Simultaneous inference <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>T.S.</mi> <mo>=</mo> <mfrac><mfrac><mrow><msub><mi>SSE</mi> <mi>red</mi> </msub> <mo>−</mo> <msub><mi>SSE</mi> <mi>full</mi> </msub> </mrow> <mrow><msub><mi>dfE</mi> <mi>red</mi> </msub> <mo>−</mo> <msub><mi>dfE</mi> <mi>full</mi> </msub> </mrow> </mfrac> <mfrac><msub><mi>SSE</mi> <mi>full</mi> </msub> <msub><mi>dfE</mi> <mi>full</mi> </msub> </mfrac> </mfrac> <mspace width="0.5em"></mspace> <mover><mo>∼</mo> <msub><mi>H</mi> <mn>0</mn> </msub> </mover> <mspace width="0.5em"></mspace> <msub><mi>F</mi> <mrow><msub><mi>ν</mi><mn>1</mn></msub> <mo>,</mo> <msub><mi>ν</mi><mn>2</mn></msub> </mrow> </msub> </math>where <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>ν</mi> <mn>1</mn> </msub> <mo>=</mo> <msub><mi>dfE</mi> <mi>red</mi> </msub> <mo>−</mo> <msub><mi>dfE</mi> <mi>full</mi> </msub> </math> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>ν</mi> <mn>2</mn> </msub> <mo>=</mo> <msub><mi>dfE</mi> <mi>full</mi> </msub> </math></p>
-<p><span style="text-decoration: underline;"><strong>CRD Model</strong></span>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>Y</mi>
-    <mrow><mi>i</mi><mi>j</mi></mrow>
-  </msub>
-  <mo>=</mo>
-  <mi>μ</mi>
-  <mo>+</mo>
-  <msub>
-    <mi>α</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mi>μ</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mi>ϵ</mi>
-    <mrow><mi>i</mi><mi>j</mi></mrow>
-  </msub>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>ϵ</mi>
-    <mrow><mi>i</mi><mi>j</mi></mrow>
-  </msub>
-  <mover>
-    <mo>∼</mo>
-    <mrow><mi>i</mi><mo>.</mo><mi>i</mi><mo>.</mo><mi>d</mi><mo>.</mo></mrow>
-  </mover>
-  <mi>N</mi>
-  <mo>(</mo>
-  <mn>0</mn>
-  <mo>,</mo>
-  <msup>
-    <mi>σ</mi>
-    <mn>2</mn>
-  </msup>
-  <mo>)</mo>
-</math>
-</p>
-<p><span style="text-decoration: underline;"><strong>CRD Sums of Squares</strong></span>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SST</mi>
-  <mo>=</mo>
-  <mi>SSE</mi>
-  <mo>+</mo>
-  <mi>SSTrt</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo>(</mo>
-  <mi>N</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>=</mo>
-  <mo>(</mo>
-  <mi>N</mi>
-  <mo>−</mo>
-  <mi>t</mi>
-  <mo>)</mo>
-  <mo>+</mo>
-  <mo>(</mo>
-  <mi>t</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SST</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>t</mi>
-  </munderover>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
-    <msub><mi>n</mi><mi>i</mi></msub>
-  </munderover>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SSE</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>t</mi>
-  </munderover>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
-    <msub><mi>n</mi><mi>i</mi></msub>
-  </munderover>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-<mi>SSTrt</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>t</mi>
-  </munderover>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
-    <msub><mi>n</mi><mi>i</mi></msub>
-  </munderover>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-</p>
-<p><span style="text-decoration: underline;"><strong>CRD Inference</strong></span><br> <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>T.S.</mi> <mo>=</mo> <mfrac><mi>MSTrt</mi> <mi>MSE</mi> </mfrac> <mspace width="0.5em"></mspace> <mover><mo>∼</mo> <msub><mi>H</mi> <mn>0</mn> </msub> </mover> <mspace width="0.5em"></mspace> <msub><mi>F</mi> <mrow><mi>t</mi> <mo>−</mo> <mn>1</mn> <mo>,</mo> <mi>N</mi> <mo>−</mo> <mi>t</mi> </mrow> </msub> </math></p>
-<p><span style="text-decoration: underline;"><strong>Post Hoc Comparisons</strong></span><br>Bonferroni: <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mover><mi>y</mi><mo>_</mo></mover> <mrow><mi>i</mi><mo>+</mo></mrow> </msub> <mo>−</mo> <msub><mover><mi>y</mi><mo>_</mo></mover> <mrow><mi>j</mi><mo>+</mo></mrow> </msub> <mo>∓</mo> <msub><mi>t</mi> <mrow><mn>1</mn> <mo>−</mo> <mi>α</mi> <mo>/</mo> <mo>(</mo> <mn>2</mn> <mi>g</mi> <mo>)</mo> <mo>,</mo> <mi>N</mi> <mo>−</mo> <mi>t</mi> </mrow> </msub> <msqrt><mrow><mi>MSE</mi> <mrow><mo>(</mo> <mfrac><mn>1</mn> <msub><mi>n</mi><mi>i</mi></msub> </mfrac> <mo>+</mo> <mfrac><mn>1</mn> <msub><mi>n</mi><mi>j</mi></msub> </mfrac> <mo>)</mo> </mrow> </mrow> </msqrt> </math>Tukey:<br>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mover><mi>y</mi><mo>_</mo></mover>
-    <mrow><mi>i</mi><mo>+</mo></mrow>
-  </msub>
-  <mo>−</mo>
-  <msub>
-    <mover><mi>y</mi><mo>_</mo></mover>
-    <mrow><mi>j</mi><mo>+</mo></mrow>
-  </msub>
-  <mo>∓</mo>
-  <msub>
-    <mi>q</mi>
-    <mrow>
-      <mn>1</mn>
-      <mo>−</mo>
-      <mi>α</mi>
-      <mo>;</mo>
-      <mi>t</mi>
-      <mo>,</mo>
-      <mi>N</mi>
-      <mo>−</mo>
-      <mi>t</mi>
-    </mrow>
-  </msub>
-  <msqrt>
-    <mfrac>
-      <mi>MSE</mi>
-      <mi>n</mi>
-    </mfrac>
-  </msqrt>
-</math>
-where
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>n</mi>
-  <mo>=</mo>
-  <mfrac>
-    <mi>t</mi>
-    <mrow>
-      <mfrac><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></mfrac>
-      <mo>+</mo>
-      <mo>⋯</mo>
-      <mo>+</mo>
-      <mfrac><mn>1</mn><msub><mi>n</mi><mi>t</mi></msub></mfrac>
-    </mrow>
-  </mfrac>
-</math>
-</p>
-<p><span style="text-decoration: underline;"><strong>RBD Model</strong></span><br>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>Y</mi>
-    <mrow><mi>i</mi><mi>j</mi></mrow>
-  </msub>
-  <mo>=</mo>
-  <mi>μ</mi>
-  <mo>+</mo>
-  <msub>
-    <mi>α</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mi>β</mi>
-    <mi>j</mi>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mi>ϵ</mi>
-    <mrow><mi>i</mi><mi>j</mi></mrow>
-  </msub>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>ϵ</mi>
-    <mrow><mi>i</mi><mi>j</mi></mrow>
-  </msub>
-  <mover>
-    <mo>∼</mo>
-    <mrow><mi>i</mi><mo>.</mo><mi>i</mi><mo>.</mo><mi>d</mi><mo>.</mo></mrow>
-  </mover>
-  <mi>N</mi>
-  <mo>(</mo>
-  <mn>0</mn>
-  <mo>,</mo>
-  <msup>
-    <mi>σ</mi>
-    <mn>2</mn>
-  </msup>
-  <mo>)</mo>
-</math></p>
-<p><span style="text-decoration: underline;"><strong>RBD Sum of Squares</strong></span><br>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SST</mi>
-  <mo>=</mo>
-  <mi>SSE</mi>
-  <mo>+</mo>
-  <mi>SSTrt</mi>
-  <mo>+</mo>
-  <mi>SSBlock</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo>(</mo>
-  <mi>b</mi>
-  <mi>t</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>=</mo>
-  <mo>(</mo>
-  <mi>b</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>(</mo>
-  <mi>t</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>+</mo>
-  <mo>(</mo>
-  <mi>t</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>+</mo>
-  <mo>(</mo>
-  <mi>b</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SST</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>t</mi>
-  </munderover>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>b</mi>
-  </munderover>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SSTrt</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>t</mi>
-  </munderover>
-  <mi>b</mi>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SSBlock</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>b</mi>
-  </munderover>
-  <mi>t</mi>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mi>j</mi></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>SSE</mi>
-  <mo>=</mo>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>t</mi>
-  </munderover>
-  <munderover>
-    <mo>∑</mo>
-    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
-    <mi>b</mi>
-  </munderover>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
-      <mo>−</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mi>j</mi></mrow></msub>
-      <mo>+</mo>
-      <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</math>
-</p>
-<p><span style="text-decoration: underline;"><strong>RBD Inference</strong></span>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>T.S.</mi>
-  <mo>=</mo>
-  <mfrac>
-    <mi>MSTrt</mi>
-    <mi>MSE</mi>
-  </mfrac>
-  <mspace width="0.5em"></mspace>
-  <mover>
-    <mo>∼</mo>
-    <msub>
-      <mi>H</mi>
-      <mn>0</mn>
-    </msub>
-  </mover>
-  <mspace width="0.5em"></mspace>
-  <msub>
-    <mi>F</mi>
-    <mrow>
-      <mi>t</mi>
-      <mo>−</mo>
-      <mn>1</mn>
-      <mo>,</mo>
-      <mo>(</mo>
-      <mi>b</mi>
-      <mo>−</mo>
-      <mn>1</mn>
-      <mo>)</mo>
-      <mo>(</mo>
-      <mi>t</mi>
-      <mo>−</mo>
-      <mn>1</mn>
-      <mo>)</mo>
-    </mrow>
-  </msub>
-</math>
-</p>
-<p><span style="text-decoration: underline;"><strong>RBD Post Hoc</strong></span><br>Same as in CRD With
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>n</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>=</mo>
-  <mi>b</mi>
-</math>
-and
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>df error</mi>
-  <mo>=</mo>
-  <mo>(</mo>
-  <mi>b</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-  <mo>(</mo>
-  <mi>t</mi>
-  <mo>−</mo>
-  <mn>1</mn>
-  <mo>)</mo>
-</math>
-</p>
+
+  <!-- Skip link for keyboard and screen reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header role="banner">
+    <h1>STA 3032 Formula Sheet</h1>
+    <h2>Modules 5 and 6</h2>
+    <nav aria-label="Formula sections">
+      <ul>
+        <li><a href="#sample-statistics">Sample Statistics</a></li>
+        <li><a href="#regression-model">Regression Model</a></li>
+        <li><a href="#regression-ss">Regression Sum of Squares</a></li>
+        <li><a href="#model-evaluation">Model Evaluation</a></li>
+        <li><a href="#inference-regression">Inference for Regression</a></li>
+        <li><a href="#crd-model">CRD Model</a></li>
+        <li><a href="#crd-ss">CRD Sums of Squares</a></li>
+        <li><a href="#crd-inference">CRD Inference</a></li>
+        <li><a href="#post-hoc">Post Hoc Comparisons</a></li>
+        <li><a href="#rbd-model">RBD Model</a></li>
+        <li><a href="#rbd-ss">RBD Sum of Squares</a></li>
+        <li><a href="#rbd-inference">RBD Inference</a></li>
+        <li><a href="#rbd-post-hoc">RBD Post Hoc</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- Sample Statistics -->
+    <section id="sample-statistics" aria-labelledby="sample-statistics-heading">
+      <h3 id="sample-statistics-heading">Sample Statistics</h3>
+
+      <p>Sample mean:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Sample mean equals one over n times the sum from i equals 1 to n of x sub i">
+        <mover><mi>x</mi><mo>_</mo></mover>
+        <mo>=</mo>
+        <mfrac><mn>1</mn><mi>n</mi></mfrac>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>n</mi>
+        </munderover>
+        <msub><mi>x</mi><mi>i</mi></msub>
+      </math>
+
+      <p>Sample variance:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Sample variance formula">
+        <msubsup><mi>s</mi><mi>x</mi><mn>2</mn></msubsup>
+        <mo>=</mo>
+        <mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac>
+        <munder><mo>∑</mo><mrow></mrow></munder>
+        <msup>
+          <mrow>
+            <mo>(</mo><msub><mi>x</mi><mi>i</mi></msub>
+            <mo>−</mo>
+            <mover><mi>x</mi><mo>_</mo></mover>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>=</mo>
+        <mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac>
+        <mrow>
+          <mo>(</mo>
+          <munder><mo>∑</mo><mrow></mrow></munder>
+          <msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup>
+          <mo>−</mo>
+          <mi>n</mi>
+          <msup><mover><mi>x</mi><mo>_</mo></mover><mn>2</mn></msup>
+          <mo>)</mo>
+        </mrow>
+      </math>
+
+      <h3 id="linear-transformations-heading">Linear Transformations</h3>
+
+      <p>Mean:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Expected value of aX plus b equals a times E of X plus b">
+        <mi>E</mi><mo stretchy="true">(</mo><mi>a</mi><mi>X</mi><mo>+</mo><mi>b</mi><mo stretchy="true">)</mo>
+        <mo>=</mo>
+        <mi>a</mi><mo>⁢</mo><mi>E</mi><mo stretchy="true">(</mo><mi>X</mi><mo stretchy="true">)</mo>
+        <mo>+</mo><mi>b</mi>
+      </math>
+
+      <p>Variance:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Variance of aX plus b equals a squared times V of X">
+        <mi>V</mi><mo stretchy="true">(</mo><mi>a</mi><mi>X</mi><mo>+</mo><mi>b</mi><mo stretchy="true">)</mo>
+        <mo>=</mo>
+        <msup><mi>a</mi><mn>2</mn></msup>
+        <mo>⁢</mo>
+        <mi>V</mi><mo stretchy="true">(</mo><mi>X</mi><mo stretchy="true">)</mo>
+      </math>
+
+      <h3 id="linear-combinations-heading">Linear Combinations</h3>
+
+      <p>Mean:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Expected value of sum of a_i X_i equals sum of a_i E of X_i">
+        <mrow>
+          <mi>E</mi><mo stretchy="true">(</mo>
+          <munderover>
+            <mo>∑</mo>
+            <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+            <mi>n</mi>
+          </munderover>
+          <mo>⁢</mo>
+          <msub><mi>a</mi><mi>i</mi></msub>
+          <mo>⁢</mo>
+          <msub><mi>X</mi><mi>i</mi></msub>
+          <mo stretchy="true">)</mo>
+          <mo>=</mo>
+          <munderover>
+            <mo>∑</mo>
+            <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+            <mi>n</mi>
+          </munderover>
+          <mo>⁢</mo>
+          <msub><mi>a</mi><mi>i</mi></msub>
+          <mo>⁢</mo>
+          <mi>E</mi><mo stretchy="false">(</mo>
+          <msub><mi>X</mi><mi>i</mi></msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </math>
+
+      <p>Variance:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Variance of sum of a_i X_i equals double sum of a_i a_j Cov of X_i X_j">
+        <mrow>
+          <mi>V</mi><mo stretchy="true">(</mo>
+          <munderover>
+            <mo>∑</mo>
+            <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+            <mi>n</mi>
+          </munderover>
+          <mo>⁢</mo>
+          <msub><mi>a</mi><mi>i</mi></msub>
+          <mo>⁢</mo>
+          <msub><mi>X</mi><mi>i</mi></msub>
+          <mo stretchy="true">)</mo>
+          <mo>=</mo>
+          <munderover>
+            <mo>∑</mo>
+            <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+            <mi>n</mi>
+          </munderover>
+          <munderover>
+            <mo>∑</mo>
+            <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+            <mi>n</mi>
+          </munderover>
+          <mo>⁢</mo>
+          <msub><mi>a</mi><mi>i</mi></msub>
+          <msub><mi>a</mi><mi>j</mi></msub>
+          <mo>⁢</mo>
+          <mi>Cov</mi>
+          <mo stretchy="false">(</mo>
+          <msub><mi>X</mi><mi>i</mi></msub>
+          <mo>,</mo>
+          <msub><mi>X</mi><mi>j</mi></msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </math>
+    </section>
+
+    <!-- Regression Model -->
+    <section id="regression-model" aria-labelledby="regression-model-heading">
+      <h3 id="regression-model-heading">Regression Model</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Y_i equals beta_0 plus beta_1 x_1i plus beta_p x_pi plus epsilon_i, where epsilon_i is i.i.d. Normal 0 sigma">
+        <mrow>
+          <msub><mi>Y</mi><mi>i</mi></msub>
+          <mo>=</mo>
+          <msub><mi>β</mi><mn>0</mn></msub>
+          <mo>+</mo>
+          <msub><mi>β</mi><mn>1</mn></msub>
+          <msub><mi>x</mi><mrow><mn>1</mn><mo>,</mo><mi>i</mi></mrow></msub>
+          <mo>+</mo>
+          <msub><mi>β</mi><mi>p</mi></msub>
+          <msub><mi>x</mi><mrow><mi>p</mi><mo>,</mo><mi>i</mi></mrow></msub>
+          <mo>+</mo>
+          <msub><mi>ϵ</mi><mi>i</mi></msub>
+          <mspace width="2em"></mspace>
+          <msub><mi>ϵ</mi><mi>i</mi></msub>
+          <mover><mo>~</mo><mstyle mathsize="0.8em"><mtext>i.i.d.</mtext></mstyle></mover>
+          <mspace width="0.2em"></mspace>
+          <mi>N</mi>
+          <mo stretchy="false">(</mo>
+          <mn>0</mn><mo>,</mo><mi>σ</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="b_1 equals sum of (x_i minus x-bar)(y_i minus y-bar) divided by sum of (x_i minus x-bar) squared">
+        <msub><mi>b</mi><mn>1</mn></msub>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <munderover>
+              <mo>∑</mo>
+              <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+              <mi>n</mi>
+            </munderover>
+            <mo stretchy="false">(</mo>
+            <msub><mi>x</mi><mi>i</mi></msub>
+            <mo>−</mo>
+            <mover><mi>x</mi><mo>_</mo></mover>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <msub><mi>y</mi><mi>i</mi></msub>
+            <mo>−</mo>
+            <mover><mi>y</mi><mo>_</mo></mover>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <munderover>
+              <mo>∑</mo>
+              <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+              <mi>n</mi>
+            </munderover>
+            <msup>
+              <mrow>
+                <mo stretchy="false">(</mo>
+                <msub><mi>x</mi><mi>i</mi></msub>
+                <mo>−</mo>
+                <mover><mi>x</mi><mo>_</mo></mover>
+                <mo stretchy="false">)</mo>
+              </mrow>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </math>
+    </section>
+
+    <!-- Regression Sum of Squares -->
+    <section id="regression-ss" aria-labelledby="regression-ss-heading">
+      <h3 id="regression-ss-heading">Regression Sum of Squares</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SST equals SSE plus SSR">
+        <mi>SST</mi><mo>=</mo><mi>SSE</mi><mo>+</mo><mi>SSR</mi>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Degrees of freedom: n minus 1 equals n minus p minus 1 plus p">
+        <mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>=</mo>
+        <mo>(</mo><mi>n</mi><mo>−</mo><mi>p</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>+</mo>
+        <mi>p</mi>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SST equals sum of (y_i minus y-bar) squared">
+        <mi>SST</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>n</mi>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo><msub><mi>y</mi><mi>i</mi></msub>
+            <mo>−</mo>
+            <mover><mi>y</mi><mo>_</mo></mover>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSE equals sum of (y_i minus y-hat_i) squared">
+        <mi>SSE</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>n</mi>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo><msub><mi>y</mi><mi>i</mi></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSR equals sum of (y-hat_i minus y-bar) squared">
+        <mi>SSR</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>n</mi>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mover><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub>
+            <mo>−</mo>
+            <mover><mi>y</mi><mo>_</mo></mover>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="MS equals SS divided by df">
+        <mi>MS</mi><mo>=</mo><mi>SS</mi><mo>/</mo><mi>df</mi>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="s squared equals MSE">
+        <msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mi>MSE</mi>
+      </math>
+    </section>
+
+    <!-- Model Evaluation Measures -->
+    <section id="model-evaluation" aria-labelledby="model-evaluation-heading">
+      <h3 id="model-evaluation-heading">Model Evaluation Measures</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="R squared equals SSR over SST equals 1 minus SSE over SST">
+        <msup><mi>R</mi><mn>2</mn></msup>
+        <mo>=</mo><mi>SSR</mi><mo>/</mo><mi>SST</mi>
+        <mo>=</mo>
+        <mn>1</mn><mo>−</mo><mi>SSE</mi><mo>/</mo><mi>SST</mi>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Adjusted R squared formula">
+        <msubsup><mi>R</mi><mi>adj</mi><mn>2</mn></msubsup>
+        <mo>=</mo>
+        <msup><mi>R</mi><mn>2</mn></msup>
+        <mo>−</mo>
+        <mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>R</mi><mn>2</mn></msup><mo>)</mo>
+        <mfrac>
+          <mi>p</mi>
+          <mrow><mi>n</mi><mo>−</mo><mi>p</mi><mo>−</mo><mn>1</mn></mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mn>1</mn><mo>−</mo>
+        <mfrac>
+          <mrow><mi>SSE</mi><mo>/</mo><mo>(</mo><mi>n</mi><mo>−</mo><mi>p</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow>
+          <mrow><mi>SST</mi><mo>/</mo><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow>
+        </mfrac>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="AIC equals 2 times p plus 1 plus n log SSE over n plus c">
+        <mi>AIC</mi>
+        <mo>=</mo>
+        <mn>2</mn><mo>(</mo><mi>p</mi><mo>+</mo><mn>1</mn><mo>)</mo>
+        <mo>+</mo>
+        <mi>n</mi><mo>log</mo>
+        <mrow>
+          <mo>(</mo>
+          <mfrac><mi>SSE</mi><mi>n</mi></mfrac>
+          <mo>)</mo>
+        </mrow>
+        <mo>+</mo><mi>c</mi>
+      </math>
+    </section>
+
+    <!-- Inference for Regression Analysis -->
+    <section id="inference-regression" aria-labelledby="inference-regression-heading">
+      <h3 id="inference-regression-heading">Inference for Regression Analysis</h3>
+
+      <p>Confidence Interval:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="b_j plus or minus t critical value times s of b_j">
+        <msub><mi>b</mi><mi>j</mi></msub>
+        <mo>∓</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow><mn>1</mn><mo>−</mo><mi>α</mi><mo>/</mo><mn>2</mn><mo>,</mo><mi>n</mi><mo>−</mo><mi>p</mi><mo>−</mo><mn>1</mn></mrow>
+        </msub>
+        <msub>
+          <mi>s</mi>
+          <msub><mi>b</mi><mi>j</mi></msub>
+        </msub>
+      </math>
+
+      <p>Hypothesis Testing:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Test statistic equals b_j minus beta_j0 divided by s of beta_j, distributed as t with n minus p minus 1 degrees of freedom under H_0">
+        <mi>T.S.</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow><msub><mi>b</mi><mi>j</mi></msub><mo>−</mo><msub><mi>β</mi><mrow><mi>j</mi><mn>0</mn></mrow></msub></mrow>
+          <msub><mi>s</mi><msub><mi>β</mi><mi>j</mi></msub></msub>
+        </mfrac>
+        <mspace width="0.5em"></mspace>
+        <mover><mo>∼</mo><msub><mi>H</mi><mn>0</mn></msub></mover>
+        <mspace width="0.5em"></mspace>
+        <msub><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub>
+      </math>
+
+      <p>Where (for simple linear regression only):</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="s of beta_1 equals s divided by square root of sum of (x_i minus x-bar) squared">
+        <msub><mi>s</mi><msub><mi>β</mi><mn>1</mn></msub></msub>
+        <mo>=</mo>
+        <mfrac>
+          <mi>s</mi>
+          <msqrt>
+            <mrow>
+              <munderover>
+                <mo>∑</mo>
+                <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                <mi>n</mi>
+              </munderover>
+              <msup>
+                <mrow>
+                  <mo>(</mo><msub><mi>x</mi><mi>i</mi></msub>
+                  <mo>−</mo>
+                  <mover><mi>x</mi><mo>_</mo></mover>
+                  <mo>)</mo>
+                </mrow>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </msqrt>
+        </mfrac>
+      </math>
+
+      <p>CI on mean response (for simple linear regression only):</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="y-hat plus or minus t critical times s times square root of 1 over n plus (x_obs minus x-bar) squared over sum of (x_j minus x-bar) squared">
+        <mover><mi>y</mi><mo>^</mo></mover>
+        <mo>∓</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow><mn>1</mn><mo>−</mo><mi>α</mi><mo>/</mo><mn>2</mn><mo>,</mo><mi>n</mi><mo>−</mo><mn>2</mn></mrow>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <mi>s</mi>
+          <msqrt>
+            <mrow>
+              <mfrac><mn>1</mn><mi>n</mi></mfrac>
+              <mo>+</mo>
+              <mfrac>
+                <msup>
+                  <mrow><mo>(</mo><msub><mi>x</mi><mi>obs</mi></msub><mo>−</mo><mover><mi>x</mi><mo>_</mo></mover><mo>)</mo></mrow>
+                  <mn>2</mn>
+                </msup>
+                <mrow>
+                  <munderover>
+                    <mo>∑</mo>
+                    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+                    <mi>n</mi>
+                  </munderover>
+                  <msup>
+                    <mrow><mo>(</mo><msub><mi>x</mi><mi>j</mi></msub><mo>−</mo><mover><mi>x</mi><mo>_</mo></mover><mo>)</mo></mrow>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </msqrt>
+          <mo>)</mo>
+        </mrow>
+      </math>
+
+      <p>PI on response (for simple linear regression only):</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="y-hat plus or minus t critical times s times square root of 1 plus 1 over n plus (x_new minus x-bar) squared over sum of (x_j minus x-bar) squared">
+        <mover><mi>y</mi><mo>^</mo></mover>
+        <mo>∓</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow><mn>1</mn><mo>−</mo><mi>α</mi><mo>/</mo><mn>2</mn><mo>,</mo><mi>n</mi><mo>−</mo><mn>2</mn></mrow>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <mi>s</mi>
+          <msqrt>
+            <mrow>
+              <mn>1</mn>
+              <mo>+</mo>
+              <mfrac><mn>1</mn><mi>n</mi></mfrac>
+              <mo>+</mo>
+              <mfrac>
+                <msup>
+                  <mrow><mo>(</mo><msub><mi>x</mi><mi>new</mi></msub><mo>−</mo><mover><mi>x</mi><mo>_</mo></mover><mo>)</mo></mrow>
+                  <mn>2</mn>
+                </msup>
+                <mrow>
+                  <munderover>
+                    <mo>∑</mo>
+                    <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+                    <mi>n</mi>
+                  </munderover>
+                  <msup>
+                    <mrow><mo>(</mo><msub><mi>x</mi><mi>j</mi></msub><mo>−</mo><mover><mi>x</mi><mo>_</mo></mover><mo>)</mo></mrow>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </msqrt>
+          <mo>)</mo>
+        </mrow>
+      </math>
+
+      <p>Simultaneous inference:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="F test statistic for simultaneous inference">
+        <mi>T.S.</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mfrac>
+            <mrow><msub><mi>SSE</mi><mi>red</mi></msub><mo>−</mo><msub><mi>SSE</mi><mi>full</mi></msub></mrow>
+            <mrow><msub><mi>dfE</mi><mi>red</mi></msub><mo>−</mo><msub><mi>dfE</mi><mi>full</mi></msub></mrow>
+          </mfrac>
+          <mfrac>
+            <msub><mi>SSE</mi><mi>full</mi></msub>
+            <msub><mi>dfE</mi><mi>full</mi></msub>
+          </mfrac>
+        </mfrac>
+        <mspace width="0.5em"></mspace>
+        <mover><mo>∼</mo><msub><mi>H</mi><mn>0</mn></msub></mover>
+        <mspace width="0.5em"></mspace>
+        <msub>
+          <mi>F</mi>
+          <mrow><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ν</mi><mn>2</mn></msub></mrow>
+        </msub>
+      </math>
+
+      <p>Where:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="nu_1 equals dfE reduced minus dfE full">
+        <msub><mi>ν</mi><mn>1</mn></msub>
+        <mo>=</mo>
+        <msub><mi>dfE</mi><mi>red</mi></msub>
+        <mo>−</mo>
+        <msub><mi>dfE</mi><mi>full</mi></msub>
+      </math>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="nu_2 equals dfE full">
+        <msub><mi>ν</mi><mn>2</mn></msub>
+        <mo>=</mo>
+        <msub><mi>dfE</mi><mi>full</mi></msub>
+      </math>
+    </section>
+
+    <!-- CRD Model -->
+    <section id="crd-model" aria-labelledby="crd-model-heading">
+      <h3 id="crd-model-heading">CRD Model</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Y_ij equals mu plus alpha_i equals mu_i plus epsilon_ij">
+        <msub><mi>Y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+        <mo>=</mo>
+        <mi>μ</mi><mo>+</mo><msub><mi>α</mi><mi>i</mi></msub>
+        <mo>=</mo>
+        <msub><mi>μ</mi><mi>i</mi></msub>
+        <mo>+</mo>
+        <msub><mi>ϵ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="epsilon_ij is i.i.d. Normal 0 sigma squared">
+        <msub><mi>ϵ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+        <mover><mo>∼</mo><mrow><mi>i</mi><mo>.</mo><mi>i</mi><mo>.</mo><mi>d</mi><mo>.</mo></mrow></mover>
+        <mi>N</mi>
+        <mo>(</mo><mn>0</mn><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>)</mo>
+      </math>
+    </section>
+
+    <!-- CRD Sums of Squares -->
+    <section id="crd-ss" aria-labelledby="crd-ss-heading">
+      <h3 id="crd-ss-heading">CRD Sums of Squares</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SST equals SSE plus SSTrt">
+        <mi>SST</mi><mo>=</mo><mi>SSE</mi><mo>+</mo><mi>SSTrt</mi>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="N minus 1 equals N minus t plus t minus 1">
+        <mo>(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>=</mo>
+        <mo>(</mo><mi>N</mi><mo>−</mo><mi>t</mi><mo>)</mo>
+        <mo>+</mo>
+        <mo>(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SST equals double sum of (y_ij minus y-bar++) squared">
+        <mi>SST</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>t</mi>
+        </munderover>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+          <msub><mi>n</mi><mi>i</mi></msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSE equals double sum of (y_ij minus y-bar_i+) squared">
+        <mi>SSE</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>t</mi>
+        </munderover>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+          <msub><mi>n</mi><mi>i</mi></msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSTrt equals double sum of (y-bar_i+ minus y-bar++) squared">
+        <mi>SSTrt</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>t</mi>
+        </munderover>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+          <msub><mi>n</mi><mi>i</mi></msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+    </section>
+
+    <!-- CRD Inference -->
+    <section id="crd-inference" aria-labelledby="crd-inference-heading">
+      <h3 id="crd-inference-heading">CRD Inference</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Test statistic equals MSTrt over MSE, distributed as F with t minus 1 and N minus t degrees of freedom under H_0">
+        <mi>T.S.</mi>
+        <mo>=</mo>
+        <mfrac><mi>MSTrt</mi><mi>MSE</mi></mfrac>
+        <mspace width="0.5em"></mspace>
+        <mover><mo>∼</mo><msub><mi>H</mi><mn>0</mn></msub></mover>
+        <mspace width="0.5em"></mspace>
+        <msub><mi>F</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>N</mi><mo>−</mo><mi>t</mi></mrow></msub>
+      </math>
+    </section>
+
+    <!-- Post Hoc Comparisons -->
+    <section id="post-hoc" aria-labelledby="post-hoc-heading">
+      <h3 id="post-hoc-heading">Post Hoc Comparisons</h3>
+
+      <p>Bonferroni:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Bonferroni confidence interval for difference of treatment means">
+        <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
+        <mo>−</mo>
+        <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>j</mi><mo>+</mo></mrow></msub>
+        <mo>∓</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow><mn>1</mn><mo>−</mo><mi>α</mi><mo>/</mo><mo>(</mo><mn>2</mn><mi>g</mi><mo>)</mo><mo>,</mo><mi>N</mi><mo>−</mo><mi>t</mi></mrow>
+        </msub>
+        <msqrt>
+          <mrow>
+            <mi>MSE</mi>
+            <mrow>
+              <mo>(</mo>
+              <mfrac><mn>1</mn><msub><mi>n</mi><mi>i</mi></msub></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>1</mn><msub><mi>n</mi><mi>j</mi></msub></mfrac>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </msqrt>
+      </math>
+
+      <p>Tukey:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Tukey confidence interval for difference of treatment means">
+        <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
+        <mo>−</mo>
+        <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>j</mi><mo>+</mo></mrow></msub>
+        <mo>∓</mo>
+        <msub>
+          <mi>q</mi>
+          <mrow><mn>1</mn><mo>−</mo><mi>α</mi><mo>;</mo><mi>t</mi><mo>,</mo><mi>N</mi><mo>−</mo><mi>t</mi></mrow>
+        </msub>
+        <msqrt>
+          <mfrac><mi>MSE</mi><mi>n</mi></mfrac>
+        </msqrt>
+      </math>
+
+      <p>Where:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="n equals t divided by sum of reciprocals of n_i">
+        <mi>n</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>t</mi>
+          <mrow>
+            <mfrac><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></mfrac>
+            <mo>+</mo><mo>⋯</mo><mo>+</mo>
+            <mfrac><mn>1</mn><msub><mi>n</mi><mi>t</mi></msub></mfrac>
+          </mrow>
+        </mfrac>
+      </math>
+    </section>
+
+    <!-- RBD Model -->
+    <section id="rbd-model" aria-labelledby="rbd-model-heading">
+      <h3 id="rbd-model-heading">RBD Model</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Y_ij equals mu plus alpha_i plus beta_j plus epsilon_ij">
+        <msub><mi>Y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+        <mo>=</mo>
+        <mi>μ</mi><mo>+</mo>
+        <msub><mi>α</mi><mi>i</mi></msub>
+        <mo>+</mo>
+        <msub><mi>β</mi><mi>j</mi></msub>
+        <mo>+</mo>
+        <msub><mi>ϵ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="epsilon_ij is i.i.d. Normal 0 sigma squared">
+        <msub><mi>ϵ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+        <mover><mo>∼</mo><mrow><mi>i</mi><mo>.</mo><mi>i</mi><mo>.</mo><mi>d</mi><mo>.</mo></mrow></mover>
+        <mi>N</mi>
+        <mo>(</mo><mn>0</mn><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>)</mo>
+      </math>
+    </section>
+
+    <!-- RBD Sum of Squares -->
+    <section id="rbd-ss" aria-labelledby="rbd-ss-heading">
+      <h3 id="rbd-ss-heading">RBD Sum of Squares</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SST equals SSE plus SSTrt plus SSBlock">
+        <mi>SST</mi><mo>=</mo><mi>SSE</mi><mo>+</mo><mi>SSTrt</mi><mo>+</mo><mi>SSBlock</mi>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Degrees of freedom: bt minus 1 equals b minus 1 times t minus 1 plus t minus 1 plus b minus 1">
+        <mo>(</mo><mi>b</mi><mi>t</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>=</mo>
+        <mo>(</mo><mi>b</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>+</mo>
+        <mo>(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>+</mo>
+        <mo>(</mo><mi>b</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SST equals double sum of (y_ij minus y-bar++) squared">
+        <mi>SST</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>t</mi>
+        </munderover>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>b</mi>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSTrt equals sum over i of b times (y-bar_i+ minus y-bar++) squared">
+        <mi>SSTrt</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>t</mi>
+        </munderover>
+        <mi>b</mi>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSBlock equals sum over j of t times (y-bar_+j minus y-bar++) squared">
+        <mi>SSBlock</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>b</mi>
+        </munderover>
+        <mi>t</mi>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mi>j</mi></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="SSE equals double sum of (y_ij minus y-bar_i+ minus y-bar_+j plus y-bar++) squared">
+        <mi>SSE</mi><mo>=</mo>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>t</mi>
+        </munderover>
+        <munderover>
+          <mo>∑</mo>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+          <mi>b</mi>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mi>i</mi><mo>+</mo></mrow></msub>
+            <mo>−</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mi>j</mi></mrow></msub>
+            <mo>+</mo>
+            <msub><mover><mi>y</mi><mo>_</mo></mover><mrow><mo>+</mo><mo>+</mo></mrow></msub>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </math>
+    </section>
+
+    <!-- RBD Inference -->
+    <section id="rbd-inference" aria-labelledby="rbd-inference-heading">
+      <h3 id="rbd-inference-heading">RBD Inference</h3>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="Test statistic equals MSTrt over MSE, distributed as F with t minus 1 and (b minus 1)(t minus 1) degrees of freedom under H_0">
+        <mi>T.S.</mi>
+        <mo>=</mo>
+        <mfrac><mi>MSTrt</mi><mi>MSE</mi></mfrac>
+        <mspace width="0.5em"></mspace>
+        <mover><mo>∼</mo><msub><mi>H</mi><mn>0</mn></msub></mover>
+        <mspace width="0.5em"></mspace>
+        <msub>
+          <mi>F</mi>
+          <mrow>
+            <mi>t</mi><mo>−</mo><mn>1</mn><mo>,</mo>
+            <mo>(</mo><mi>b</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+            <mo>(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+          </mrow>
+        </msub>
+      </math>
+    </section>
+
+    <!-- RBD Post Hoc -->
+    <section id="rbd-post-hoc" aria-labelledby="rbd-post-hoc-heading">
+      <h3 id="rbd-post-hoc-heading">RBD Post Hoc</h3>
+
+      <p>Same as in CRD with:</p>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="n_i equals b">
+        <msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mi>b</mi>
+      </math>
+
+      <p>and</p>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+            aria-label="df error equals (b minus 1)(t minus 1)">
+        <mi>df error</mi>
+        <mo>=</mo>
+        <mo>(</mo><mi>b</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+        <mo>(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo>)</mo>
+      </math>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 STA 3032 Formula Sheet. For accessibility concerns, contact your instructor.</p>
+  </footer>
+
 </body>
 </html>
